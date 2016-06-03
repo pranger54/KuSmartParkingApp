@@ -10,9 +10,20 @@ import prangerz54.kusmartparking.R;
  * Created by PrangerZ54 on 6/3/2016 AD.
  */
 public class Lowprice extends AppCompatActivity {
+
+    private int indexList,indexCarpark;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lowprice);
+        indexList = this.getIntent().getIntExtra("i", -1);
+        indexCarpark = this.getIntent().getIntExtra("j", -1);
+        initComponents();
     }
+
+    public void initComponents(){
+
+    }
+
+
 }

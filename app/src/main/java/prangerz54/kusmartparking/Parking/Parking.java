@@ -1,9 +1,11 @@
 package prangerz54.kusmartparking.Parking;
 
+import java.io.Serializable;
+
 /**
  * Created by PrangerZ54 on 5/13/2016 AD.
  */
-public class Parking {
+public class Parking implements Serializable {
 
     private String name;
     private double distance;
