@@ -1,4 +1,4 @@
-package prangerz54.kusmartparking.Parking;
+package prangerz54.kusmartparking.Carpark;
 
 import java.io.Serializable;
 
