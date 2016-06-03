@@ -11,8 +11,37 @@
     android:background="@android:color/holo_blue_light"
     tools:context=".Activity.MainActivity">
 
-    <TextView
-        android:text="Hello World!"
+
+    <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="Find Nearby Carpark"
+        android:id="@+id/findnearbyBtn"
+        android:layout_above="@+id/availableBtn"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Find Available Carpark"
+        android:id="@+id/availableBtn"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Information"
+        android:id="@+id/informtionBtn"
+        android:layout_below="@+id/lowpriceBtn"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Find Lowest Carpark"
+        android:id="@+id/lowpriceBtn"
+        android:layout_below="@+id/availableBtn"
+        android:layout_alignLeft="@+id/findnearbyBtn"
+        android:layout_alignStart="@+id/findnearbyBtn" />
 </RelativeLayout>
