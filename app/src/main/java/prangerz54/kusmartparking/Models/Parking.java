@@ -1,18 +1,18 @@
-package prangerz54.kusmartparking.Carpark;
+package prangerz54.kusmartparking.Models;
 
 import java.io.Serializable;
 
 /**
  * Created by PrangerZ54 on 5/13/2016 AD.
  */
-public class Parking implements Serializable {
+public abstract class Parking implements Serializable {
 
     private String name;
     private double distance;
+    private int price;
 
-    public Parking(String name,double distance){
-        this.name = name;
-        this.distance = distance;
+    public Parking(){
+
     }
 
 
@@ -29,7 +29,15 @@ public class Parking implements Serializable {
     }
 
     public void setDistance(double distance) {
-        this.distance = distance;
+      this.distance = distance;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 
     public String toString(){

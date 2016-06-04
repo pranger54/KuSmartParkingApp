@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import prangerz54.kusmartparking.Carpark.Parking;
+import prangerz54.kusmartparking.Models.Parking;
 import prangerz54.kusmartparking.R;
 
 /**
