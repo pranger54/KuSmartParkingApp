@@ -1,8 +1,11 @@
 package prangerz54.kusmartparking.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -35,9 +38,6 @@ public class Lowprice extends AppCompatActivity {
     protected void onStart(){
         super.onStart();
         carpark.clear();
-        for(Parking thisCarpark : Storage.getInstance().loadSavedParking().get(indexList).getNewParkingList()) {
-            carpark.add(thisCarpark);
-        }
         carparkAdapter.notifyDataSetChanged();
 
     }
@@ -47,6 +47,16 @@ public class Lowprice extends AppCompatActivity {
         carparkAdapter= new CarparkAdapter(this,R.layout.parking_cell,carpark);
         carparkListView = (ListView)findViewById(R.id.carparkListView);
         carparkListView.setAdapter( carparkAdapter );
+        carparkListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int indexCard, long l) {
+                Intent intent = new Intent(Lowprice.this, FindAvailableCarpark.class);
+                intent.putExtra("i", indexList);
+                intent.putExtra("j", indexCard);
+                startActivity(intent);
+            }
+        });
+
 
 
     }

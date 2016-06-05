@@ -20,7 +20,6 @@
         <activity android:name=".Activity.FindAvailableCarpark"></activity>
         <activity android:name=".Activity.InformationActivity"></activity>
         <activity android:name=".Activity.Lowprice"></activity>
-        <activity android:name=".Activity.NearbyCarpark"></activity>
     </application>
 
 </manifest>
